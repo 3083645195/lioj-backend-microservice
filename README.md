@@ -34,13 +34,13 @@ https://github.com/alibaba/spring-cloud-alibaba <br>
 6. Docker:使用Docker进行容器化部署
 7. Kubernetes:使用k8s进行容器化部署
 
-![img_1.png](doc%2Fimg_1.png)
+![img_1](https://zhaoli-image.oss-cn-beijing.aliyuncs.com/img/img_1.png)
 
 注意，一定要选择对应的版本:https://sca.aliyun.com/zh-cn/docs/2021.0.5.0/overview/version-explain <br>
 本项目选择 2021.0.5.0 <br>
 Nacos:集中存管项目中所有服务的信息，便于服务之间找到彼此;同时，还支持集中存储整个项目中的配置<br>
 整个微服务请求流程:
-![img_2.png](doc%2Fimg_2.png)
+![img_2](https://zhaoli-image.oss-cn-beijing.aliyuncs.com/img/img_2.png)
 
 ## 改造前思考
 
@@ -164,9 +164,9 @@ startup.cmd -m standalone
 ```
 
 依次使用 new modules 和 spring boot Initializr 创建各模块<br>
-![img_3.png](doc%2Fimg_3.png) <br>
+![img_3](https://zhaoli-image.oss-cn-beijing.aliyuncs.com/img/img_3.png) <br>
 需要给各模块之间绑定子父依赖关系<br>
-![img_4.png](doc%2Fimg_4.png) <br>
+![img_4](https://zhaoli-image.oss-cn-beijing.aliyuncs.com/img/img_4.png) <br>
 父模块定义 modules，子模块引入 parent 语法，可以通过继承父模块配置，统一项目的定义和版本号。
 
 ### 同步代码和依赖
@@ -336,7 +336,7 @@ server:
     <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
     <version>4.3.0</version>
 </dependency>
- ```
+```
 
 引入配置:
 
@@ -376,7 +376,7 @@ knife4j:
 ```
 
 3. 访问地址即可查看聚合接口文档:http://127.0.0.1:8101/doc.html <br>
-   ![img_5.png](doc%2Fimg_5.png)
+   ![img_5](https://zhaoli-image.oss-cn-beijing.aliyuncs.com/img/img_5.png)
 
 **3. 分布式 Session 登录**<br>
 必须引入 spring data redis 依赖
